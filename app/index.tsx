@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { StyleSheet, Text, View, TouchableOpacity, SafeAreaView, StatusBar } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
 import { useAuth0 } from 'react-native-auth0';
-import { useRouter, useSegments } from 'expo-router';
+import { Link, useRouter, useSegments } from 'expo-router';
 
 export default function LoginScreen() {
     const { authorize, user, error } = useAuth0();

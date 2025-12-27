@@ -1,10 +1,10 @@
 import React from 'react';
 import { StyleSheet, View, Text, SafeAreaView, StatusBar, ScrollView } from 'react-native';
 import { Ionicons } from '@expo/vector-icons';
-import FoodAnalyzer from '@/services/foodAnalyzer';
+import SleepData from '@/app/sleep/pages/SleepData';
 import { useAuth0 } from 'react-native-auth0';
 
-export default function FoodScreen() {
+export default function SleepScreen() {
     const { user } = useAuth0();
 
     if (!user) {
@@ -17,10 +17,10 @@ export default function FoodScreen() {
             <View style={styles.gradient}>
                 <View style={styles.header}>
                     <View style={styles.headerLeft}>
-                        <Ionicons name="restaurant" size={32} color="#FFFFFF" />
+                        <Ionicons name="moon" size={32} color="#FFFFFF" />
                         <View>
-                            <Text style={styles.headerTitle}>Food Analyzer</Text>
-                            <Text style={styles.headerSubtitle}>Track your nutrition</Text>
+                            <Text style={styles.headerTitle}>Sleep Analyzer</Text>
+                            <Text style={styles.headerSubtitle}>Track your sleep patterns</Text>
                         </View>
                     </View>
                 </View>
@@ -29,7 +29,7 @@ export default function FoodScreen() {
                     contentContainerStyle={styles.scrollContent}
                     showsVerticalScrollIndicator={false}
                 >
-                    <FoodAnalyzer />
+                    <SleepData />
                 </ScrollView>
             </View>
         </SafeAreaView>
