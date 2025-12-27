@@ -39,11 +39,23 @@
             "backgroundColor": "#000000"
           }
         }
+      ],
+      [
+        "react-native-auth0",
+        {
+          "domain": "dev-t4cynlfydmh4fois.us.auth0.com"
+        }
       ]
     ],
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "3af449ee-5f04-43ef-9457-40a7c45a358e"
+      }
     }
   }
 }

@@ -7,6 +7,8 @@ export default function FoodAnalyzer() {
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState(null);
 
+  
+
   const pickImage = async (useCamera = false) => {
     // Request permissions
     const permissionResult = useCamera 
