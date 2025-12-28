@@ -124,6 +124,35 @@ export default function TabsLayout() {
           },
         }}
       />
+      <Tabs.Screen
+        name="profile"
+        options={{
+          title: 'Profile',
+          tabBarActiveTintColor: '#FFEB3B',
+          tabBarInactiveTintColor: '#E8E8E8',
+          tabBarIcon: ({ focused }) => {
+            const iconColor = focused ? '#FFEB3B' : '#E8E8E8';
+            return (
+              <View style={{
+                backgroundColor: focused ? 'rgba(255, 235, 59, 0.2)' : 'transparent',
+                borderRadius: 12,
+                padding: 6,
+                paddingHorizontal: 12,
+                justifyContent: 'center',
+                alignItems: 'center',
+                minHeight: 40,
+                minWidth: 40,
+              }}>
+                <Ionicons 
+                  name={focused ? "person" : "person-outline"} 
+                  size={focused ? 26 : 24} 
+                  color={iconColor}
+                />
+              </View>
+            );
+          },
+        }}
+      />
     </Tabs>
   );
 }
