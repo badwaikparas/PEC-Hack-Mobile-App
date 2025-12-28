@@ -14,9 +14,9 @@ export default function TabsLayout() {
         tabBarStyle: {
           backgroundColor: '#1A5A6B',
           borderTopWidth: 0,
-          height: Platform.OS === 'ios' ? 75 + insets.bottom : 60 + insets.bottom,
-          paddingBottom: Platform.OS === 'ios' ? 15 + insets.bottom : Math.max(insets.bottom, 20),
-          paddingTop: 5,
+          height: Platform.OS === 'ios' ? 85 + insets.bottom : 75 + insets.bottom,
+          paddingBottom: Platform.OS === 'ios' ? 10 + insets.bottom : Math.max(insets.bottom, 10),
+          paddingTop: 10,
           paddingHorizontal: 8,
           elevation: 8,
           shadowColor: '#000',
@@ -27,11 +27,13 @@ export default function TabsLayout() {
         tabBarLabelStyle: {
           fontSize: 11,
           fontWeight: '700',
-          marginTop: 0,
+          marginTop: 4,
+          marginBottom: 0,
         },
         tabBarShowLabel: true,
         tabBarIconStyle: {
           marginTop: 0,
+          marginBottom: 0,
         },
       }}
     >
@@ -47,12 +49,16 @@ export default function TabsLayout() {
               <View style={{
                 backgroundColor: focused ? 'rgba(255, 235, 59, 0.2)' : 'transparent',
                 borderRadius: 12,
-                padding: 4,
-                paddingHorizontal: 10,
+                padding: 6,
+                paddingHorizontal: 12,
+                justifyContent: 'center',
+                alignItems: 'center',
+                minHeight: 40,
+                minWidth: 40,
               }}>
                 <Ionicons 
                   name={focused ? "home" : "home-outline"} 
-                  size={focused ? 24 : 22} 
+                  size={focused ? 26 : 24} 
                   color={iconColor}
                 />
               </View>
@@ -72,12 +78,16 @@ export default function TabsLayout() {
               <View style={{
                 backgroundColor: focused ? 'rgba(255, 235, 59, 0.2)' : 'transparent',
                 borderRadius: 12,
-                padding: 4,
-                paddingHorizontal: 10,
+                padding: 6,
+                paddingHorizontal: 12,
+                justifyContent: 'center',
+                alignItems: 'center',
+                minHeight: '80%',
+                minWidth: 'auto',
               }}>
                 <Ionicons 
                   name={focused ? "restaurant" : "restaurant-outline"} 
-                  size={focused ? 24 : 22} 
+                  size={focused ? 26 : 24} 
                   color={iconColor}
                 />
               </View>
@@ -97,12 +107,16 @@ export default function TabsLayout() {
               <View style={{
                 backgroundColor: focused ? 'rgba(255, 235, 59, 0.2)' : 'transparent',
                 borderRadius: 12,
-                padding: 4,
-                paddingHorizontal: 10,
+                padding: 6,
+                paddingHorizontal: 12,
+                justifyContent: 'center',
+                alignItems: 'center',
+                minHeight: 40,
+                minWidth: 40,
               }}>
                 <Ionicons 
                   name={focused ? "moon" : "moon-outline"} 
-                  size={focused ? 24 : 22} 
+                  size={focused ? 26 : 24} 
                   color={iconColor}
                 />
               </View>
